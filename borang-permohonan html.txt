@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borang Permohonan Reka Bentuk Grafik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+        .checkbox-group label {
+            display: block;
+            margin-left: 25px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Borang Permohonan Reka Bentuk Grafik</h1>
+        <form>
+            <h2>A. Maklumat Pemohon</h2>
+            <label for="nama">Nama Pemohon:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama anda" required>
+
+            <label for="jabatan">Jabatan/Unit:</label>
+            <input type="text" id="jabatan" name="jabatan" placeholder="Masukkan jabatan/unit anda" required>
+
+            <label for="telefon">No. Telefon:</label>
+            <input type="text" id="telefon" name="telefon" placeholder="Masukkan nombor telefon anda" required>
+
+            <label for="email">E-mel Rasmi:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan e-mel rasmi anda" required>
+
+            <label for="tarikh-permohonan">Tarikh Permohonan:</label>
+            <input type="date" id="tarikh-permohonan" name="tarikh-permohonan" required>
+
+            <h2>B. Butiran Projek</h2>
+            <label for="nama-projek">Nama Projek:</label>
+            <input type="text" id="nama-projek" name="nama-projek" placeholder="Masukkan nama projek" required>
+
+            <label>Jenis Reka Bentuk:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Poster"> Poster</label>
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Infografik"> Infografik</label>
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Logo"> Logo</label>
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Banner"> Banner</label>
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Brosur"> Brosur</label>
+                <label><input type="checkbox" name="jenis-reka-bentuk" value="Lain-lain"> Lain-lain</label>
+            </div>
+
+            <label for="format">Format Reka Bentuk Diperlukan:</label>
+            <select id="format" name="format">
+                <option value="Cetakan">Cetakan (PDF/AI)</option>
+                <option value="Digital">Digital (JPEG/PNG)</option>
+                <option value="Lain-lain">Lain-lain</option>
+            </select>
+
+            <label for="dimensi">Dimensi Reka Bentuk (Saiz):</label>
+            <input type="text" id="dimensi" name="dimensi" placeholder="Contoh: A4, A3, 1080x1920 px">
+
+            <label for="tema">Tema dan Konsep:</label>
+            <textarea id="tema" name="tema" placeholder="Nyatakan tema, warna, atau gaya yang diinginkan"></textarea>
+
+            <label for="lampiran">Kandungan Reka Bentuk:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="lampiran" value="Teks"> Teks</label>
+                <label><input type="checkbox" name="lampiran" value="Imej"> Imej/Grafik</label>
+                <label><input type="checkbox" name="lampiran" value="Logo"> Logo</label>
+            </div>
+
+            <h2>C. Tarikh dan Tempoh Penghasilan</h2>
+            <label for="tarikh-akhir">Tarikh Akhir Penyerahan Reka Bentuk:</label>
+            <input type="date" id="tarikh-akhir" name="tarikh-akhir" required>
+
+            <label>Permohonan Dihantar (Sekurang-kurangnya 7 hari bekerja sebelum tarikh akhir):</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="tempoh" value="Ya" required> Ya</label>
+                <label><input type="radio" name="tempoh" value="Tidak" required> Tidak</label>
+            </div>
+
+            <h2>D. Rujukan/Panduan Tambahan</h2>
+            <label>Adakah contoh reka bentuk disediakan?</label>
+            <div class="checkbox-group">
+                <label><input type="radio" name="contoh" value="Ya" required> Ya</label>
+                <label><input type="radio" name="contoh" value="Tidak" required> Tidak</label>
+            </div>
+
+            <label for="catatan">Catatan atau arahan tambahan:</label>
+            <textarea id="catatan" name="catatan" placeholder="Masukkan arahan tambahan di sini"></textarea>
+
+            <h2>E. Pengesahan Pemohon</h2>
+            <label>Saya mengesahkan bahawa semua maklumat yang diberikan adalah tepat dan kandungan telah disemak.</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="pengesahan" required> Saya bersetuju</label>
+            </div>
+
+            <button type="submit">Hantar Permohonan</button>
+        </form>
+    </div>
+</body>
+</html>
